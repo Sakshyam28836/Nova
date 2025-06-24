@@ -1,5 +1,5 @@
 
-import { Bot, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
             <div className="p-2 bg-primary/20 rounded-lg">
-              <Bot className="h-8 w-8 text-primary" />
+              <img 
+                src="/lovable-uploads/112a0c03-f028-4202-8084-9b6481cdccc9.png" 
+                alt="Zero Bot" 
+                className="h-8 w-8"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold gradient-text">Zero Bot</h1>

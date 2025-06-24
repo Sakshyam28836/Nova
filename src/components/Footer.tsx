@@ -1,5 +1,6 @@
 
-import { Bot, ExternalLink, Github, Twitter, MessageSquare } from "lucide-react";
+import { ExternalLink, Github, Twitter, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,7 +10,11 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="p-2 bg-primary/20 rounded-lg">
-                <Bot className="h-6 w-6 text-primary" />
+                <img 
+                  src="/lovable-uploads/112a0c03-f028-4202-8084-9b6481cdccc9.png" 
+                  alt="Zero Bot" 
+                  className="h-6 w-6"
+                />
               </div>
               <div>
                 <h3 className="text-lg font-bold gradient-text">Zero Bot</h3>
@@ -26,7 +31,7 @@ const Footer = () => {
               <a href="#" className="p-2 bg-secondary/50 hover:bg-secondary rounded-lg transition-colors">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-secondary/50 hover:bg-secondary rounded-lg transition-colors">
+              <a href="https://discord.gg/5aMghbn2uW" target="_blank" rel="noopener noreferrer" className="p-2 bg-secondary/50 hover:bg-secondary rounded-lg transition-colors">
                 <MessageSquare className="h-5 w-5" />
               </a>
             </div>
@@ -45,14 +50,14 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Links</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="/commands" className="hover:text-primary transition-colors">Commands</a></li>
+              <li><Link to="/commands" className="hover:text-primary transition-colors">Commands</Link></li>
               <li><a href="https://discord.gg/5aMghbn2uW" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                 Support Server <ExternalLink className="h-3 w-3" />
               </a></li>
               <li><a href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                 Invite Bot <ExternalLink className="h-3 w-3" />
               </a></li>
-              <li><a href="/dashboard" className="hover:text-primary transition-colors">Dashboard</a></li>
+              <li><Link to="/dashboard" className="hover:text-primary transition-colors">Dashboard</Link></li>
             </ul>
           </div>
         </div>
@@ -63,8 +68,8 @@ const Footer = () => {
               Made By gamerzboy at 2025 🇳🇵
             </p>
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
