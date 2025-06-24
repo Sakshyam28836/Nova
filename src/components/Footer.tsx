@@ -43,11 +43,15 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
+            <h4 className="font-semibold mb-4">Links</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Discord Server</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                Support Server <ExternalLink className="h-3 w-3" />
+              </a></li>
+              <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                Invite Bot <ExternalLink className="h-3 w-3" />
+              </a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Status Page</a></li>
             </ul>
           </div>
@@ -56,14 +60,11 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground mb-4 md:mb-0">
-              © 2024 Zero Bot. All rights reserved.
+              Made By gamerzboy at 2025 🇳🇵
             </p>
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
-                Invite Bot <ExternalLink className="h-3 w-3" />
-              </a>
             </div>
           </div>
         </div>
