@@ -45,14 +45,14 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Links</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+              <li><a href="/commands" className="hover:text-primary transition-colors">Commands</a></li>
+              <li><a href="https://discord.gg/5aMghbn2uW" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                 Support Server <ExternalLink className="h-3 w-3" />
               </a></li>
-              <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+              <li><a href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                 Invite Bot <ExternalLink className="h-3 w-3" />
               </a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Status Page</a></li>
+              <li><a href="/dashboard" className="hover:text-primary transition-colors">Dashboard</a></li>
             </ul>
           </div>
         </div>

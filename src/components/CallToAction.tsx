@@ -23,16 +23,26 @@ const CallToAction = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105 group">
+            <a 
+              href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105 group"
+            >
               <Bot className="h-5 w-5 group-hover:rotate-12 transition-transform" />
               Add to Discord
               <ExternalLink className="h-4 w-4" />
-            </button>
+            </a>
             
-            <button className="px-8 py-4 bg-secondary text-secondary-foreground rounded-xl hover:bg-secondary/80 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105">
+            <a 
+              href="https://discord.gg/5aMghbn2uW"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-secondary text-secondary-foreground rounded-xl hover:bg-secondary/80 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105"
+            >
               <Shield className="h-5 w-5" />
-              View Permissions
-            </button>
+              Join Support Server
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
