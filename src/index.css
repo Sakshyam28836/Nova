@@ -48,6 +48,8 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(135deg, hsl(220 13% 9%) 0%, hsl(220 13% 11%) 50%, hsl(220 13% 9%) 100%);
+    min-height: 100vh;
   }
 
   html {
@@ -66,11 +68,11 @@
 
 @layer utilities {
   .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -78,38 +80,66 @@
 
   .feature-card {
     @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 md:p-6 transition-all duration-300 hover:bg-card/70 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.5) 0%, hsl(220 13% 13% / 0.7) 100%);
   }
 
   .hero-glow {
-    box-shadow: 0 0 50px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 50px hsl(262 83% 58% / 0.3), 0 0 100px hsl(217 91% 60% / 0.2);
+    animation: pulse-glow 3s ease-in-out infinite alternate;
   }
 
-  /* Mobile-specific utilities */
+  .stats-card {
+    @apply bg-gradient-to-br from-card/40 to-card/60 backdrop-blur-md border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:from-card/60 hover:to-card/80 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10;
+  }
+
+  .glass-effect {
+    @apply bg-card/20 backdrop-blur-md border border-border/30 rounded-xl;
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.2) 0%, hsl(220 13% 13% / 0.4) 100%);
+  }
+
+  /* Container improvements */
   .container {
-    @apply max-w-7xl;
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Section backgrounds */
+  .section-bg-primary {
+    background: radial-gradient(circle at 20% 50%, hsl(262 83% 58% / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(217 91% 60% / 0.1) 0%, transparent 50%),
+                linear-gradient(135deg, hsl(220 13% 9%) 0%, hsl(220 13% 11%) 100%);
+  }
+
+  .section-bg-secondary {
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.5) 0%, hsl(220 13% 9%) 50%, hsl(220 13% 11% / 0.3) 100%);
   }
 
   /* Animation utilities */
   .animate-in {
-    animation: animate-in 0.2s ease-out;
+    animation: animate-in 0.6s ease-out forwards;
   }
 
   .slide-in-from-top-2 {
-    animation: slide-in-from-top-2 0.2s ease-out;
+    animation: slide-in-from-top-2 0.4s ease-out forwards;
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
   }
 
   @keyframes animate-in {
     from {
       opacity: 0;
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
   @keyframes slide-in-from-top-2 {
     from {
-      transform: translateY(-8px);
+      transform: translateY(-16px);
       opacity: 0;
     }
     to {
@@ -117,15 +147,59 @@
       opacity: 1;
     }
   }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 50px hsl(262 83% 58% / 0.3), 0 0 100px hsl(217 91% 60% / 0.2);
+    }
+    100% {
+      box-shadow: 0 0 60px hsl(262 83% 58% / 0.4), 0 0 120px hsl(217 91% 60% / 0.3);
+    }
+  }
+
+  /* Button improvements */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary/80 backdrop-blur-sm text-secondary-foreground rounded-lg font-semibold border border-border/50 transition-all duration-300 hover:bg-secondary hover:border-primary/30 hover:shadow-lg hover:scale-105 active:scale-95;
+  }
 }
 
 /* Ensure proper touch interactions on mobile */
 @media (hover: none) and (pointer: coarse) {
   .hover\:scale-105:hover {
-    transform: none;
+    transform: scale(1.02);
   }
   
   .hover\:-translate-y-1:hover {
-    transform: none;
+    transform: translateY(-2px);
+  }
+}
+
+/* Smooth scrolling improvements */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus improvements for accessibility */
+@layer base {
+  button:focus-visible,
+  a:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
   }
 }

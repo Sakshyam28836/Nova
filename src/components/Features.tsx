@@ -38,33 +38,33 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+    <section id="features" className="py-16 md:py-20 section-bg-secondary relative">
+      <div className="container">
+        <div className="text-center mb-12 md:mb-16 fade-in-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 gradient-text">
             Powerful Features
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Zero comes packed with everything you need to manage and enhance your Discord server
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Zero comes packed with everything you need to manage and enhance your Discord server with professional-grade tools
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {features.map((feature, index) => (
-            <div key={feature.name} className="feature-card group">
+            <div key={feature.name} className="feature-card group" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-center justify-center mb-4">
-                <div className="p-3 bg-secondary/50 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className={`h-8 w-8 ${feature.color} group-hover:text-primary transition-colors`} />
+                <div className="p-3 bg-secondary/50 rounded-lg group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                  <feature.icon className={`h-6 w-6 md:h-8 md:w-8 ${feature.color} group-hover:text-primary transition-colors duration-300`} />
                 </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-center">{feature.name}</h3>
-              <p className="text-muted-foreground text-sm text-center">{feature.description}</p>
+              <h3 className="text-base md:text-lg font-semibold mb-2 text-center">{feature.name}</h3>
+              <p className="text-muted-foreground text-sm text-center leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all duration-300 font-semibold text-lg hover:scale-105">
+        <div className="text-center">
+          <button className="btn-primary text-lg">
             Explore All Features
           </button>
         </div>
