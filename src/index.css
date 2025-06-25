@@ -79,8 +79,8 @@
   }
 
   .feature-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 md:p-6 transition-all duration-300 hover:bg-card/70 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
-    background: linear-gradient(135deg, hsl(220 13% 11% / 0.5) 0%, hsl(220 13% 13% / 0.7) 100%);
+    @apply bg-card/40 backdrop-blur-sm border border-border/40 rounded-xl p-4 md:p-6 transition-all duration-300 hover:bg-card/60 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.4) 0%, hsl(220 13% 13% / 0.6) 100%);
   }
 
   .hero-glow {
@@ -89,12 +89,12 @@
   }
 
   .stats-card {
-    @apply bg-gradient-to-br from-card/40 to-card/60 backdrop-blur-md border border-border/50 rounded-2xl p-6 transition-all duration-300 hover:from-card/60 hover:to-card/80 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10;
+    @apply bg-gradient-to-br from-card/30 to-card/50 backdrop-blur-md border border-border/40 rounded-2xl p-4 md:p-6 transition-all duration-300 hover:from-card/50 hover:to-card/70 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10;
   }
 
   .glass-effect {
-    @apply bg-card/20 backdrop-blur-md border border-border/30 rounded-xl;
-    background: linear-gradient(135deg, hsl(220 13% 11% / 0.2) 0%, hsl(220 13% 13% / 0.4) 100%);
+    @apply bg-card/15 backdrop-blur-md border border-border/25 rounded-xl;
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.15) 0%, hsl(220 13% 13% / 0.3) 100%);
   }
 
   /* Container improvements */
@@ -104,13 +104,13 @@
 
   /* Section backgrounds */
   .section-bg-primary {
-    background: radial-gradient(circle at 20% 50%, hsl(262 83% 58% / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsl(217 91% 60% / 0.1) 0%, transparent 50%),
+    background: radial-gradient(circle at 20% 50%, hsl(262 83% 58% / 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(217 91% 60% / 0.08) 0%, transparent 50%),
                 linear-gradient(135deg, hsl(220 13% 9%) 0%, hsl(220 13% 11%) 100%);
   }
 
   .section-bg-secondary {
-    background: linear-gradient(135deg, hsl(220 13% 11% / 0.5) 0%, hsl(220 13% 9%) 50%, hsl(220 13% 11% / 0.3) 100%);
+    background: linear-gradient(135deg, hsl(220 13% 11% / 0.3) 0%, hsl(220 13% 9%) 50%, hsl(220 13% 11% / 0.2) 100%);
   }
 
   /* Animation utilities */
@@ -174,7 +174,7 @@
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-secondary/80 backdrop-blur-sm text-secondary-foreground rounded-lg font-semibold border border-border/50 transition-all duration-300 hover:bg-secondary hover:border-primary/30 hover:shadow-lg hover:scale-105 active:scale-95;
+    @apply px-6 py-3 bg-secondary/60 backdrop-blur-sm text-secondary-foreground rounded-lg font-semibold border border-border/40 transition-all duration-300 hover:bg-secondary/80 hover:border-primary/30 hover:shadow-lg hover:scale-105 active:scale-95;
   }
 }
 

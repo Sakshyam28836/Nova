@@ -26,8 +26,8 @@ const Hero = () => {
             Zero Discord Bot
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
-            The ultimate Discord bot with 15+ powerful features to manage, entertain, and grow your server community with professional-grade tools.
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
+            The ultimate Discord bot with powerful features to manage and grow your server community.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16">
@@ -38,7 +38,7 @@ const Hero = () => {
               className="btn-primary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg"
             >
               <Bot className="h-5 w-5" />
-              Invite Zero Bot
+              Add to Discord
               <ExternalLink className="h-4 w-4" />
             </a>
             <a 
@@ -48,26 +48,26 @@ const Hero = () => {
               className="btn-secondary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg"
             >
               <Shield className="h-5 w-5" />
-              Join Support Server
+              Support Server
             </a>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-2xl mx-auto">
             <div className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group">
               <Shield className="h-6 w-6 md:h-8 md:w-8 text-blue-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-sm md:text-base">Moderation</h3>
+              <h3 className="font-semibold text-sm md:text-base">Secure</h3>
             </div>
             <div className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group">
               <Zap className="h-6 w-6 md:h-8 md:w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-sm md:text-base">Lightning Fast</h3>
+              <h3 className="font-semibold text-sm md:text-base">Fast</h3>
             </div>
             <div className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group">
               <Bot className="h-6 w-6 md:h-8 md:w-8 text-green-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-sm md:text-base">AI Powered</h3>
+              <h3 className="font-semibold text-sm md:text-base">Smart</h3>
             </div>
             <div className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group">
               <Users className="h-6 w-6 md:h-8 md:w-8 text-purple-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-sm md:text-base">Community</h3>
+              <h3 className="font-semibold text-sm md:text-base">Reliable</h3>
             </div>
           </div>
         </div>
