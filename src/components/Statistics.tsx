@@ -4,15 +4,11 @@ import { useEffect, useState } from "react";
 
 const Statistics = () => {
   const [counts, setCounts] = useState({
-    servers: 0,
-    users: 0,
     commands: 0,
     uptime: 0
   });
 
   const stats = [
-    { label: "Servers", value: "10,000+", target: 10000, icon: Server, color: "text-blue-400" },
-    { label: "Users", value: "500K+", target: 500000, icon: Users, color: "text-green-400" },
     { label: "Commands Used", value: "2M+", target: 2000000, icon: MessageSquare, color: "text-purple-400" },
     { label: "Uptime", value: "99.9%", target: 99.9, icon: Clock, color: "text-yellow-400" }
   ];
@@ -57,14 +53,14 @@ const Statistics = () => {
   };
 
   return (
-    <section id="stats" className="py-16 md:py-20 bg-secondary/20">
+    <section id="stats" className="py-16 md:py-20 bg-secondary/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 gradient-text">
-            Trusted Worldwide
+            Performance Excellence
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-8">
-            Join thousands of Discord communities already using Zero
+            Built for reliability, speed, and seamless Discord integration
           </p>
           <a 
             href="https://zstatus.indmc.fun"
@@ -77,28 +73,26 @@ const Statistics = () => {
           </a>
         </div>
 
-        {/* Main Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+        {/* Core Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 md:mb-16 max-w-2xl mx-auto">
           {stats.map((stat, index) => (
             <div key={stat.label} className="text-center group">
-              <div className="inline-flex items-center justify-center p-3 md:p-4 bg-card/30 rounded-2xl mb-3 md:mb-4 group-hover:bg-card/50 transition-all duration-300 group-hover:scale-110">
-                <stat.icon className={`h-6 w-6 md:h-8 md:w-8 ${stat.color}`} />
+              <div className="inline-flex items-center justify-center p-4 md:p-6 bg-card/30 rounded-2xl mb-4 group-hover:bg-card/50 transition-all duration-300 group-hover:scale-110">
+                <stat.icon className={`h-8 w-8 md:h-10 md:w-10 ${stat.color}`} />
               </div>
-              <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2 transition-all duration-300">
-                {stat.label === 'Servers' && formatNumber(counts.servers, stat.value)}
-                {stat.label === 'Users' && formatNumber(counts.users, stat.value)}
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 transition-all duration-300">
                 {stat.label === 'Commands Used' && formatNumber(counts.commands, stat.value)}
                 {stat.label === 'Uptime' && formatNumber(counts.uptime, stat.value)}
               </div>
-              <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
+              <div className="text-base md:text-lg text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Additional Performance Metrics */}
+        {/* Performance Metrics */}
         <div className="bg-card/20 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">
-            Performance & Trust
+            Advanced Performance
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {additionalStats.map((stat, index) => (
@@ -113,7 +107,7 @@ const Statistics = () => {
           </div>
         </div>
 
-        {/* Real-time Status Indicators */}
+        {/* System Status */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 md:p-6 text-center">
             <div className="flex items-center justify-center gap-2 mb-2">

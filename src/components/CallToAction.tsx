@@ -4,8 +4,8 @@ import { Bot, ExternalLink, Shield, Star } from "lucide-react";
 const CallToAction = () => {
   return (
     <section id="invite" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
       
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
@@ -14,12 +14,12 @@ const CallToAction = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to <span className="gradient-text">Transform</span> Your Server?
+            Experience <span className="gradient-text">Zero</span> Today
           </h2>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Join thousands of Discord servers using Zero to create amazing communities. 
-            Get started in seconds with our easy setup process.
+            Professional Discord bot management with advanced features and reliable performance. 
+            Join the Zero ecosystem with our streamlined setup process.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -35,7 +35,7 @@ const CallToAction = () => {
             </a>
             
             <a 
-              href="https://discord.gg/5aMghbn2uW"
+              href="https://discord.gg/vdHy6VPR8f"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-secondary text-secondary-foreground rounded-xl hover:bg-secondary/80 transition-all duration-300 font-semibold text-lg flex items-center justify-center gap-2 hover:scale-105"
@@ -48,20 +48,20 @@ const CallToAction = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6">
               <Star className="h-6 w-6 text-yellow-400 mb-3 mx-auto" />
-              <h3 className="font-semibold mb-2">Easy Setup</h3>
-              <p className="text-sm text-muted-foreground">Get started in under 2 minutes</p>
+              <h3 className="font-semibold mb-2">Professional Setup</h3>
+              <p className="text-sm text-muted-foreground">Enterprise-grade deployment</p>
             </div>
             
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6">
               <Shield className="h-6 w-6 text-green-400 mb-3 mx-auto" />
-              <h3 className="font-semibold mb-2">Secure & Safe</h3>
-              <p className="text-sm text-muted-foreground">Minimal permissions required</p>
+              <h3 className="font-semibold mb-2">Secure & Reliable</h3>
+              <p className="text-sm text-muted-foreground">Minimal permissions, maximum security</p>
             </div>
             
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6">
               <Bot className="h-6 w-6 text-blue-400 mb-3 mx-auto" />
-              <h3 className="font-semibold mb-2">24/7 Support</h3>
-              <p className="text-sm text-muted-foreground">Always here to help</p>
+              <h3 className="font-semibold mb-2">24/7 Operations</h3>
+              <p className="text-sm text-muted-foreground">Continuous support & monitoring</p>
             </div>
           </div>
         </div>
