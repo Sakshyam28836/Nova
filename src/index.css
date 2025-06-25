@@ -47,10 +47,20 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  /* Mobile tap targets */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
 
@@ -67,10 +77,55 @@
   }
 
   .feature-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 transition-all duration-300 hover:bg-card/70 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 md:p-6 transition-all duration-300 hover:bg-card/70 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
   }
 
   .hero-glow {
     box-shadow: 0 0 50px rgba(102, 126, 234, 0.3);
+  }
+
+  /* Mobile-specific utilities */
+  .container {
+    @apply max-w-7xl;
+  }
+
+  /* Animation utilities */
+  .animate-in {
+    animation: animate-in 0.2s ease-out;
+  }
+
+  .slide-in-from-top-2 {
+    animation: slide-in-from-top-2 0.2s ease-out;
+  }
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-top-2 {
+    from {
+      transform: translateY(-8px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Ensure proper touch interactions on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  .hover\:-translate-y-1:hover {
+    transform: none;
   }
 }
