@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="p-2 bg-primary/20 rounded-lg">
                 <img 
-                  src="/lovable-uploads/112a0c03-f028-4202-8084-9b6481cdccc9.png" 
+                  src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
                   alt="Zero Bot" 
                   className="h-6 w-6"
                 />
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              Made By gamerzboy at 2025 🇳🇵
+              © 2025 Zero Bot. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 md:space-x-6 text-sm text-muted-foreground">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>

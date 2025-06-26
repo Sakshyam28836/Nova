@@ -7,13 +7,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 animate-slide-down">
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3">
-            <div className="p-1.5 md:p-2 bg-primary/20 rounded-lg">
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3 hover:scale-105 transition-transform duration-300">
+            <div className="p-1.5 md:p-2 bg-primary/20 rounded-lg animate-pulse-glow">
               <img 
-                src="/lovable-uploads/112a0c03-f028-4202-8084-9b6481cdccc9.png" 
+                src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
                 alt="Zero Bot" 
                 className="h-6 w-6 md:h-8 md:w-8"
               />
@@ -25,16 +25,16 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors text-sm lg:text-base">
+            <a href="#features" className="nav-link">
               Features
             </a>
-            <Link to="/commands" className="text-foreground hover:text-primary transition-colors text-sm lg:text-base">
+            <Link to="/commands" className="nav-link">
               Commands
             </Link>
-            <Link to="/dashboard" className="text-foreground hover:text-primary transition-colors text-sm lg:text-base">
+            <Link to="/dashboard" className="nav-link">
               Dashboard
             </Link>
-            <a href="#stats" className="text-foreground hover:text-primary transition-colors text-sm lg:text-base">
+            <a href="#stats" className="nav-link">
               Statistics
             </a>
           </nav>
@@ -44,14 +44,14 @@ const Header = () => {
               href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 lg:px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm lg:text-base"
+              className="btn-primary animate-bounce-subtle"
             >
               Invite Zero
             </a>
           </div>
 
           <button 
-            className="md:hidden p-2 hover:bg-secondary/50 rounded-lg transition-colors"
+            className="md:hidden p-2 hover:bg-secondary/50 rounded-lg transition-all duration-300 hover:scale-110"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -60,32 +60,32 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border/50 animate-in slide-in-from-top-2">
+          <div className="md:hidden mt-4 py-4 border-t border-border/50 animate-slide-in-down">
             <nav className="flex flex-col space-y-3">
               <a 
                 href="#features" 
-                className="text-foreground hover:text-primary transition-colors py-2 px-2 rounded-lg hover:bg-secondary/50"
+                className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <Link 
                 to="/commands" 
-                className="text-foreground hover:text-primary transition-colors py-2 px-2 rounded-lg hover:bg-secondary/50"
+                className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Commands
               </Link>
               <Link 
                 to="/dashboard" 
-                className="text-foreground hover:text-primary transition-colors py-2 px-2 rounded-lg hover:bg-secondary/50"
+                className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dashboard
               </Link>
               <a 
                 href="#stats" 
-                className="text-foreground hover:text-primary transition-colors py-2 px-2 rounded-lg hover:bg-secondary/50"
+                className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Statistics
@@ -95,7 +95,7 @@ const Header = () => {
                   href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
+                  className="block px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium text-center hover:scale-105"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Invite Zero
