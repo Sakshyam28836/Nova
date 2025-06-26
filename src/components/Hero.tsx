@@ -18,25 +18,27 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
                 alt="Zero Bot" 
-                className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 animate-spin-slow"
+                className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 animate-glow-pulse"
               />
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 gradient-text leading-tight animate-slide-up">
-            Zero Discord Bot
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 gradient-text leading-tight animate-text-reveal">
+            <span className="inline-block animate-slide-up">Zero</span>{" "}
+            <span className="inline-block animate-slide-up-delayed">Discord</span>{" "}
+            <span className="inline-block animate-slide-up-more-delayed">Bot</span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up-delayed">
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
             The ultimate Discord bot with powerful features to manage and grow your server community.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16 animate-slide-up-more-delayed">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16 animate-buttons-entrance">
             <a 
               href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg animate-bounce-gentle"
+              className="btn-primary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg animate-btn-hover"
             >
               <Bot className="h-5 w-5 animate-pulse" />
               Add to Discord
@@ -46,7 +48,7 @@ const Hero = () => {
               href="https://discord.gg/vdHy6VPR8f"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg"
+              className="btn-secondary flex items-center gap-2 w-full sm:w-auto text-base md:text-lg animate-btn-hover-delayed"
             >
               <Shield className="h-5 w-5" />
               Support Server
@@ -60,9 +62,9 @@ const Hero = () => {
               { icon: Bot, text: "Smart", color: "text-green-400", delay: "0.2s" },
               { icon: Users, text: "Reliable", color: "text-purple-400", delay: "0.3s" }
             ].map((item, index) => (
-              <div key={index} className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group animate-fade-in-up" style={{ animationDelay: item.delay }}>
-                <item.icon className={`h-6 w-6 md:h-8 md:w-8 ${item.color} mx-auto mb-2 group-hover:scale-125 transition-transform duration-300`} />
-                <h3 className="font-semibold text-sm md:text-base">{item.text}</h3>
+              <div key={index} className="glass-effect p-3 md:p-4 hover:bg-card/50 transition-all duration-300 group animate-feature-card" style={{ animationDelay: item.delay }}>
+                <item.icon className={`h-6 w-6 md:h-8 md:w-8 ${item.color} mx-auto mb-2 group-hover:scale-125 transition-transform duration-300 animate-icon-float`} />
+                <h3 className="font-semibold text-sm md:text-base animate-text-glow">{item.text}</h3>
               </div>
             ))}
           </div>
