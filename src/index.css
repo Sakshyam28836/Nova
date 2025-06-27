@@ -1,28 +1,29 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 235 85.6% 64.7%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 235 85.6% 64.7%;
+  --background: 32 34 38;
+  --foreground: 220 221 222;
+  --card: 47 49 54;
+  --card-foreground: 220 221 222;
+  --popover: 47 49 54;
+  --popover-foreground: 220 221 222;
+  --primary: 88 101 242;
+  --primary-foreground: 255 255 255;
+  --secondary: 79 84 92;
+  --secondary-foreground: 220 221 222;
+  --muted: 79 84 92;
+  --muted-foreground: 153 170 181;
+  --accent: 88 101 242;
+  --accent-foreground: 255 255 255;
+  --destructive: 237 66 69;
+  --destructive-foreground: 255 255 255;
+  --border: 79 84 92;
+  --input: 64 68 75;
+  --ring: 88 101 242;
   --radius: 0.75rem;
 }
 
@@ -42,7 +43,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* Session Management Styles */
+/* Enhanced Session Management Styles */
 .session-wrapper {
   transition: all 0.3s ease;
 }
@@ -59,7 +60,46 @@ body.page-inactive {
   opacity: 0.9;
 }
 
-/* Preloader for better resource management */
+/* Enhanced Error Handling System */
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(32, 34, 38, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(20px);
+}
+
+.error-container {
+  max-width: 500px;
+  padding: 2rem;
+  background: hsl(var(--card));
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.error-recovery {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: hsl(var(--destructive));
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(237, 66, 69, 0.3);
+  animation: slideInFromBottom 0.5s ease-out;
+  z-index: 9999;
+}
+
+/* Resource preloader for better performance */
 .resource-preloader {
   position: fixed;
   top: 0;
@@ -78,46 +118,54 @@ body.page-inactive {
   100% { transform: translateX(100%); }
 }
 
-/* Enhanced error handling styles */
-.error-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  backdrop-filter: blur(10px);
-}
-
 /* Utilities */
 .text-balance {
   text-wrap: balance;
 }
 
-/* Buttons */
+/* Discord-themed Buttons */
 .btn-primary {
-  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground bg-primary text-primary-foreground h-11 px-8
+  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8;
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #7289da 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4752c4 0%, #5865f2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.6);
 }
 
 .btn-secondary {
-    @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground bg-secondary text-secondary-foreground h-11 px-8
+  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8;
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.btn-secondary:hover {
+  background: hsl(var(--muted));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline {
-  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground bg-transparent border border-border h-11 px-8
+  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-transparent border border-border h-11 px-8;
 }
 
 .btn-destructive {
-  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground bg-destructive text-destructive-foreground h-11 px-8
+  @apply relative inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8;
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
 }
 
-/* Cards */
+/* Cards with Discord theme */
 .card {
-  @apply rounded-lg border bg-card text-card-foreground shadow-sm
+  @apply rounded-lg shadow-sm;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--card-foreground));
 }
 
 .card-header {
@@ -140,9 +188,18 @@ body.page-inactive {
   @apply flex items-center p-6 pt-0
 }
 
-/* Input */
+/* Enhanced Input with Discord theme */
 .input {
-  @apply flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+  @apply flex h-11 w-full rounded-md text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  background: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  padding: 0 12px;
+}
+
+.input:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
 }
 
 /* Label */
@@ -152,29 +209,36 @@ body.page-inactive {
 
 /* Popover */
 .popover {
-  @apply rounded-lg border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-100 data-[state=closed]:slide-out-to-top-0 data-[state=open]:slide-in-from-top-0
+  @apply rounded-lg shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-100 data-[state=closed]:slide-out-to-top-0 data-[state=open]:slide-in-from-top-0;
+  background: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--popover-foreground));
 }
 
 .popover-content {
   @apply space-y-1 p-6
 }
 
-/* Scrollbar */
+/* Enhanced Discord-styled scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: hsl(var(--muted));
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
 }
 
-/* Enhanced animations for better user experience */
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+/* Enhanced animations */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -205,13 +269,13 @@ body.page-inactive {
   animation: slideInFromBottom 0.8s ease-out;
 }
 
-/* Improved loading states */
+/* Enhanced loading states */
 .loading-shimmer {
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.1) 100%
+    rgba(88, 101, 242, 0.1) 0%,
+    rgba(88, 101, 242, 0.3) 50%,
+    rgba(88, 101, 242, 0.1) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 2s ease-in-out infinite;
@@ -222,45 +286,17 @@ body.page-inactive {
   100% { background-position: 200% 0; }
 }
 
-/* Enhanced glass effect for better visual hierarchy */
+/* Enhanced glass effect with Discord colors */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(47, 49, 54, 0.8);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(88, 101, 242, 0.2);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(88, 101, 242, 0.1);
 }
 
-/* Professional button enhancements */
-.btn-primary, .btn-secondary {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Enhanced section backgrounds */
-.section-bg-primary {
-  background: linear-gradient(135deg, 
-    hsl(var(--background)) 0%, 
-    hsl(var(--background)) 50%, 
-    rgba(59, 130, 246, 0.02) 100%
-  );
-}
-
-.section-bg-secondary {
-  background: linear-gradient(135deg, 
-    rgba(17, 24, 39, 0.8) 0%, 
-    hsl(var(--background)) 50%, 
-    rgba(139, 92, 246, 0.02) 100%
-  );
-}
-
-/* Enhanced gradient text */
+/* Enhanced Discord gradient text */
 .gradient-text {
   background: linear-gradient(
     135deg,
@@ -308,18 +344,20 @@ body.page-inactive {
 
 @keyframes pulse-glow {
   0%, 100% { 
-    opacity: 0.5;
+    opacity: 0.6;
     transform: scale(1);
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
   }
   50% { 
     opacity: 1;
     transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(88, 101, 242, 0.8);
   }
 }
 
-@keyframes text-shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .animate-float {
@@ -334,17 +372,8 @@ body.page-inactive {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-.animate-text-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: text-shimmer 3s ease-in-out infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
 }
 
 /* Enhanced hover effects */
@@ -366,6 +395,11 @@ body.page-inactive {
   .gradient-text {
     background-size: 150% 150%;
   }
+  
+  .error-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
 }
 
 /* Enhanced accessibility */
@@ -377,9 +411,28 @@ body.page-inactive {
   }
 }
 
-/* Focus improvements */
+/* Focus improvements with Discord colors */
 *:focus-visible {
   outline: 2px solid hsl(var(--primary));
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* Enhanced error states */
+.error-highlight {
+  background: rgba(237, 66, 69, 0.1);
+  border: 1px solid rgba(237, 66, 69, 0.3);
+  color: #ed4245;
+}
+
+.success-highlight {
+  background: rgba(87, 242, 135, 0.1);
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  color: #57f287;
+}
+
+.warning-highlight {
+  background: rgba(254, 231, 92, 0.1);
+  border: 1px solid rgba(254, 231, 92, 0.3);
+  color: #fee75c;
 }
