@@ -1,1 +1,1 @@
-https://zero.indmc.fun
+https://nova.indmc.fun
