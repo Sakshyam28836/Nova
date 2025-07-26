@@ -16,10 +16,10 @@ const Dashboard = () => {
               <Settings className="h-12 w-12 text-primary" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Zero Bot <span className="gradient-text">Dashboard</span>
+              Nova Bot <span className="gradient-text">Dashboard</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Manage your Discord server with Zero's powerful web dashboard
+              Manage your Discord server with Nova's powerful web dashboard
             </p>
           </div>
 
@@ -27,10 +27,10 @@ const Dashboard = () => {
           <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-8 mb-12">
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-4">
-                <span className="gradient-text">Zero Dashboard Setup</span>
+                <span className="gradient-text">Nova Dashboard Setup</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Access the complete Zero Bot dashboard to configure settings, view analytics, and manage your server from anywhere.
+                Access the complete Nova Bot dashboard to configure settings, view analytics, and manage your server from anywhere.
               </p>
               
               <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 mb-8 max-w-md mx-auto">
@@ -136,8 +136,8 @@ const Dashboard = () => {
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-primary font-bold text-lg">1</span>
                 </div>
-                <h3 className="font-semibold mb-2">Invite Zero Bot</h3>
-                <p className="text-muted-foreground text-sm">Add Zero to your Discord server with the required permissions.</p>
+                <h3 className="font-semibold mb-2">Invite Nova Bot</h3>
+                <p className="text-muted-foreground text-sm">Add Nova to your Discord server with the required permissions.</p>
               </div>
               
               <div className="text-center">
@@ -153,7 +153,7 @@ const Dashboard = () => {
                   <span className="text-primary font-bold text-lg">3</span>
                 </div>
                 <h3 className="font-semibold mb-2">Configure Settings</h3>
-                <p className="text-muted-foreground text-sm">Customize Zero's features to match your server's needs.</p>
+                <p className="text-muted-foreground text-sm">Customize Nova's features to match your server's needs.</p>
               </div>
             </div>
           </div>

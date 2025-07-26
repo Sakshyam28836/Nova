@@ -28,7 +28,7 @@ const Terms = () => {
               </div>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  By inviting Zero Bot to your Discord server or using our services, you agree to these terms. 
+                  By inviting Nova Bot to your Discord server or using our services, you agree to these terms. 
                   If you do not agree, please do not use our services.
                 </p>
               </div>
@@ -40,7 +40,7 @@ const Terms = () => {
                 <h2 className="text-2xl font-bold">Service Description</h2>
               </div>
               <div className="space-y-4 text-muted-foreground">
-                <p>Zero Bot provides Discord server management and entertainment features including:</p>
+                <p>Nova Bot provides Discord server management and entertainment features including:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Moderation tools and automated systems</li>
                   <li>Music and entertainment commands</li>
@@ -87,7 +87,7 @@ const Terms = () => {
               </div>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Zero Bot is provided "as is" without warranties. We are not liable for any damages 
+                  Nova Bot is provided "as is" without warranties. We are not liable for any damages 
                   arising from use of our service, including but not limited to data loss or service interruptions.
                 </p>
               </div>

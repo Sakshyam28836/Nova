@@ -25,7 +25,7 @@ const Statistics = () => {
             Built for reliability and speed with enterprise-grade performance
           </p>
           <a 
-            href="https://zstatus.indmc.fun"
+            href="https://status.indmc.fun"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-green-500/25"

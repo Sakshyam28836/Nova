@@ -64,7 +64,7 @@ const TrustedPartners = () => {
             Trusted by Leading Communities
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground animate-typing-reveal">
-            Join thousands who trust Zero Bot for their Discord servers
+            Join thousands who trust Nova Bot for their Discord servers
           </p>
         </div>
 

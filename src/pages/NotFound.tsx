@@ -14,7 +14,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   const handleReload = () => {
-    window.location.href = "https://zero.indmc.fun";
+    window.location.href = "https://nova.indmc.fun";
   };
 
   const handleGoHome = () => {
@@ -89,11 +89,11 @@ const NotFound = () => {
             <div className="flex items-center justify-center gap-3">
               <img 
                 src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
-                alt="Zero Bot" 
+                alt="Nova Bot" 
                 className="h-8 w-8"
               />
               <div>
-                <h3 className="font-bold gradient-text">Zero Bot</h3>
+                <h3 className="font-bold gradient-text">Nova Bot</h3>
                 <p className="text-xs text-muted-foreground">Discord Management</p>
               </div>
             </div>

@@ -17,17 +17,17 @@ const CallToAction = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 gradient-text">
-            Experience <span className="text-accent">Zero</span> Today
+            Experience <span className="text-accent">Nova</span> Today
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Professional Discord bot management with advanced features and reliable performance. 
-            Join the Zero ecosystem with our streamlined setup process.
+            Join the Nova ecosystem with our streamlined setup process.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <a 
-              href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center gap-2 text-lg group"

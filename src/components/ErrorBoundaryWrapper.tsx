@@ -11,7 +11,7 @@ const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ children })
   const { hasError, error, resetError } = useErrorBoundary();
 
   const handleReload = () => {
-    window.location.href = "https://zero.indmc.fun";
+    window.location.href = "https://nova.indmc.fun";
   };
 
   if (hasError) {

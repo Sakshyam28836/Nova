@@ -28,7 +28,7 @@ const Privacy = () => {
               </div>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Zero Bot collects minimal data necessary to provide Discord bot services:
+                  Nova Bot collects minimal data necessary to provide Discord bot services:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Discord User IDs and usernames for command functionality</li>

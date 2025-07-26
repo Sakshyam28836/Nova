@@ -14,12 +14,12 @@ const Header = () => {
             <div className="p-1.5 md:p-2 bg-primary/20 rounded-lg animate-pulse-glow">
               <img 
                 src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
-                alt="Zero Bot" 
+                alt="Nova Bot" 
                 className="h-6 w-6 md:h-8 md:w-8"
               />
             </div>
             <div>
-              <h1 className="text-lg md:text-xl font-bold gradient-text">Zero Bot</h1>
+              <h1 className="text-lg md:text-xl font-bold gradient-text">Nova Bot</h1>
               <p className="text-xs text-muted-foreground hidden sm:block">Discord Management</p>
             </div>
           </Link>
@@ -41,12 +41,12 @@ const Header = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary animate-bounce-subtle"
             >
-              Invite Zero
+              Invite Nova
             </a>
           </div>
 
@@ -92,13 +92,13 @@ const Header = () => {
               </a>
               <div className="pt-2 border-t border-border/50">
                 <a 
-                  href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
+                  href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium text-center hover:scale-105"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Invite Zero
+                  Invite Nova
                 </a>
               </div>
             </nav>

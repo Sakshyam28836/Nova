@@ -68,7 +68,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-xl animate-pulse-glow group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-500"></div>
               <img 
                 src="/lovable-uploads/48d5ac17-7fc6-4a8e-bfea-36c8dc2cc75b.png" 
-                alt="Zero Bot" 
+                alt="Nova Bot" 
                 className="relative h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 animate-glow-pulse group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-spin-slow"></div>
@@ -76,7 +76,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight animate-text-reveal">
-            <span className="inline-block animate-slide-up gradient-text animate-text-shimmer">Zero</span>{" "}
+            <span className="inline-block animate-slide-up gradient-text animate-text-shimmer">Nova</span>{" "}
             <span className="inline-block animate-slide-up-delayed gradient-text animate-text-shimmer-delayed">Discord</span>{" "}
             <span className="inline-block animate-slide-up-more-delayed gradient-text animate-text-shimmer-more-delayed">Bot</span>
           </h1>
@@ -90,7 +90,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16 animate-buttons-entrance">
             <a 
-              href="https://discord.com/oauth2/authorize?client_id=1380841482948448357&permissions=8&integration_type=0&scope=bot+applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary btn-magnetic flex items-center gap-2 w-full sm:w-auto text-base md:text-lg animate-btn-hover group relative overflow-hidden"
