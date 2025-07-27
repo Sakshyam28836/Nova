@@ -76,7 +76,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight animate-text-reveal">
-            <span className="inline-block animate-slide-up gradient-text animate-text-shimmer">Nova</span>{" "}
+            <span className="inline-block animate-slide-up-delayed gradient-text animate-text-shimmer">Nova</span>{" "}
             <span className="inline-block animate-slide-up-delayed gradient-text animate-text-shimmer-delayed">Discord</span>{" "}
             <span className="inline-block animate-slide-up-more-delayed gradient-text animate-text-shimmer-more-delayed">Bot</span>
           </h1>
