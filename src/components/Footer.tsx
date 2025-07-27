@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © 2025 Nova Bot. All rights reserved with Hexa Development. Developed By Sakshyam paudel🇳🇵.
+              © 2025 Nova Bot. All rights reserved with Hexa Development. Developed By Sakshyam paudel and Aadesh Kharel🇳🇵.
             </p>
             <div className="flex items-center space-x-4 md:space-x-6 text-sm text-muted-foreground">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
