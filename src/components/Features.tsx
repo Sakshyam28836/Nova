@@ -20,9 +20,9 @@ import {
 const Features = () => {
   const features = [
     { name: "Moderation", icon: Hammer, description: "Advanced moderation tools", color: "text-red-400" },
-    { name: "Economy", icon: DollarSign, description: "Virtual currency system", color: "text-green-400" },
+    { name: "AntiNuke & Security", icon: Settings, description: "A security features to save your server from nukers", color: "text-green-400" },
     { name: "Music", icon: Music, description: "High-quality music player", color: "text-purple-400" },
-    { name: "Fun", icon: Sparkles, description: "Entertainment commands", color: "text-yellow-400" },
+    { name: "Games and Fun", icon: Sparkles, description: "Entertainment commands and games like chess memory etc.", color: "text-yellow-400" },
     { name: "Utility", icon: Search, description: "Helpful utility tools", color: "text-blue-400" },
     { name: "Statistics", icon: BarChart3, description: "Server analytics", color: "text-cyan-400" },
     { name: "Giveaways", icon: Gift, description: "Giveaway management", color: "text-pink-400" },
