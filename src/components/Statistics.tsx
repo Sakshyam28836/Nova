@@ -3,10 +3,10 @@ import { MessageSquare, Clock, Activity, Zap, Shield, Heart } from "lucide-react
 
 const Statistics = () => {
   const stats = [
-    { label: "Commands", value: "1M+", icon: MessageSquare, color: "text-purple-400" },
+    { label: "Commands", value: "300+", icon: MessageSquare, color: "text-purple-400" },
     { label: "Uptime", value: "99.9%", icon: Clock, color: "text-green-400" },
-    { label: "Response Time", value: "< 50ms", icon: Zap, color: "text-yellow-400" },
-    { label: "Satisfaction", value: "98%", icon: Heart, color: "text-pink-400" }
+    { label: "Response Time", value: "< 20ms", icon: Zap, color: "text-yellow-400" },
+    { label: "Satisfaction", value: "95%", icon: Heart, color: "text-pink-400" }
   ];
 
   return (
