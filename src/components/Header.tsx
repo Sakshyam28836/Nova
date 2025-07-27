@@ -31,9 +31,6 @@ const Header = () => {
             <Link to="/commands" className="nav-link">
               Commands
             </Link>
-            <Link to="/dashboard" className="nav-link">
-              Dashboard
-            </Link>
             <a href="#stats" className="nav-link">
               Statistics
             </a>
@@ -75,13 +72,6 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Commands
-              </Link>
-              <Link 
-                to="/dashboard" 
-                className="mobile-nav-link"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Dashboard
               </Link>
               <a 
                 href="#stats" 
