@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md text-sm md:text-base">
-              The ultimate Discord bot with 15+ powerful features to manage, entertain, and grow your server community.
+              The ultimate Discord bot with 20+ powerful features to manage, entertain, and grow your server community.
             </p>
             <div className="flex space-x-3 md:space-x-4">
               <a href="#" className="p-2 bg-secondary/50 hover:bg-secondary rounded-lg transition-colors">
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              © 2025 Nova Bot. All rights reserved with Hexa Development 🇳🇵.
+              © 2025 Nova Bot. All rights reserved with Hexa Development. Developed By Sakshyam paudel🇳🇵.
             </p>
             <div className="flex items-center space-x-4 md:space-x-6 text-sm text-muted-foreground">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
