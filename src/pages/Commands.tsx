@@ -470,10 +470,10 @@ const Commands = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background cyber-grid relative overflow-hidden">
-      {/* Cyber background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/5 via-transparent to-cyber-secondary/5 pointer-events-none" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-primary/50 to-transparent animate-pulse" />
+    <div className="min-h-screen bg-background discord-grid relative overflow-hidden">
+      {/* Discord background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-pulse" />
       
       <Header />
       
@@ -481,7 +481,7 @@ const Commands = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 scroll-reveal">
             <div className="inline-flex items-center justify-center p-4 bg-primary/20 rounded-2xl mb-6 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyber-primary/20 to-cyber-secondary/20 rounded-2xl blur-xl animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl animate-pulse" />
               <Bot className="h-12 w-12 text-primary relative z-10" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -504,7 +504,7 @@ const Commands = () => {
                   <AccordionTrigger className="px-6 py-4 hover:bg-card/40 transition-colors group">
                     <div className="flex items-center gap-4">
                       <div className="p-2 rounded-lg bg-primary/20 relative overflow-hidden group-hover:bg-primary/30 transition-colors">
-                        <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/20 to-cyber-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                         <category.icon className={`h-6 w-6 ${category.color} relative z-10`} />
                       </div>
                       <div className="text-left">
@@ -524,7 +524,7 @@ const Commands = () => {
                           key={cmdIndex} 
                           className="bg-secondary/30 rounded-lg p-4 hover:bg-secondary/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10 border border-transparent hover:border-primary/20 group"
                         >
-                          <h4 className="font-mono text-sm font-semibold text-primary mb-2 group-hover:text-cyber-primary transition-colors">
+                          <h4 className="font-mono text-sm font-semibold text-primary mb-2 group-hover:text-discord-primary transition-colors">
                             {command.name}
                           </h4>
                           <p className="text-sm text-muted-foreground">
@@ -541,7 +541,7 @@ const Commands = () => {
 
           <div className="max-w-4xl mx-auto mt-16 text-center scroll-reveal">
             <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-8 relative overflow-hidden border border-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/10 to-cyber-secondary/10 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 animate-pulse" />
               <div className="relative z-10">
                 <h2 className="text-2xl font-bold mb-4">Need Help?</h2>
                 <p className="text-muted-foreground mb-6">

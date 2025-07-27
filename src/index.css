@@ -4,35 +4,32 @@
 @tailwind utilities;
 
 :root {
-  --background: 220 27% 3%;
-  --foreground: 180 100% 90%;
-  --card: 220 27% 5%;
-  --card-foreground: 180 100% 90%;
-  --popover: 220 27% 5%;
-  --popover-foreground: 180 100% 90%;
-  --primary: 180 100% 50%;
-  --primary-foreground: 220 27% 3%;
-  --secondary: 220 20% 10%;
-  --secondary-foreground: 180 100% 90%;
-  --muted: 220 20% 10%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 270 100% 70%;
-  --accent-foreground: 220 27% 3%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 220 20% 15%;
-  --input: 220 20% 10%;
-  --ring: 180 100% 50%;
+  --background: 225 6% 13%;
+  --foreground: 210 40% 98%;
+  --card: 224 71% 4%;
+  --card-foreground: 210 40% 98%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 235 86% 65%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 215 28% 17%;
+  --muted-foreground: 217 10% 65%;
+  --accent: 215 28% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 215 28% 17%;
+  --input: 215 28% 17%;
+  --ring: 235 86% 65%;
   --radius: 0.75rem;
   
-  /* Cyber future theme */
-  --cyber-primary: 180 100% 50%;
-  --cyber-secondary: 270 100% 70%;
-  --cyber-accent: 300 100% 60%;
-  --cyber-glow: 180 100% 50%;
-  --cyber-grid: 180 30% 20%;
-  --cyber-dark: 220 27% 3%;
-  --cyber-surface: 220 20% 8%;
+  /* Discord bot theme colors */
+  --discord-primary: 235 86% 65%;
+  --discord-secondary: 262 83% 58%;
+  --discord-accent: 235 86% 65%;
+  --discord-blurple: 235 86% 65%;
 }
 
 * {
@@ -269,33 +266,33 @@ body.page-inactive {
   );
 }
 
-/* Cyber future gradient text */
+/* Discord bot gradient text */
 .gradient-text {
   background: linear-gradient(
     135deg,
-    hsl(var(--cyber-primary)) 0%,
-    hsl(var(--cyber-secondary)) 25%,
-    hsl(var(--cyber-accent)) 50%,
-    hsl(var(--foreground)) 75%,
-    hsl(var(--cyber-primary)) 100%
+    #5865F2 0%,
+    #EB459E 25%,
+    #7289DA 50%,
+    #99AAB5 75%,
+    #5865F2 100%
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: cyberGradientShift 4s ease-in-out infinite;
+  animation: discordGradientShift 4s ease-in-out infinite;
 }
 
-@keyframes cyberGradientShift {
+@keyframes discordGradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
-/* Cyber grid background */
-.cyber-grid {
+/* Discord grid background */
+.discord-grid {
   background-image: 
-    linear-gradient(hsl(var(--cyber-grid) / 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--cyber-grid) / 0.1) 1px, transparent 1px);
+    linear-gradient(hsl(var(--discord-primary) / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--discord-primary) / 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
   animation: grid-move 20s linear infinite;
 }
@@ -339,21 +336,21 @@ body.page-inactive {
   transform: translateX(0);
 }
 
-/* Cyber theme utilities */
-.text-cyber-primary {
-  color: hsl(var(--cyber-primary));
+/* Discord theme utilities */
+.text-discord-primary {
+  color: hsl(var(--discord-primary));
 }
 
-.text-cyber-secondary {
-  color: hsl(var(--cyber-secondary));
+.text-discord-secondary {
+  color: hsl(var(--discord-secondary));
 }
 
-.bg-cyber-primary {
-  background-color: hsl(var(--cyber-primary));
+.bg-discord-primary {
+  background-color: hsl(var(--discord-primary));
 }
 
-.bg-cyber-secondary {
-  background-color: hsl(var(--cyber-secondary));
+.bg-discord-secondary {
+  background-color: hsl(var(--discord-secondary));
 }
 
 /* Enhanced animations */
