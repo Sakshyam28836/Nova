@@ -4,26 +4,35 @@
 @tailwind utilities;
 
 :root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 235 85.6% 64.7%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 235 85.6% 64.7%;
+  --background: 220 27% 3%;
+  --foreground: 180 100% 90%;
+  --card: 220 27% 5%;
+  --card-foreground: 180 100% 90%;
+  --popover: 220 27% 5%;
+  --popover-foreground: 180 100% 90%;
+  --primary: 180 100% 50%;
+  --primary-foreground: 220 27% 3%;
+  --secondary: 220 20% 10%;
+  --secondary-foreground: 180 100% 90%;
+  --muted: 220 20% 10%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 270 100% 70%;
+  --accent-foreground: 220 27% 3%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 20% 15%;
+  --input: 220 20% 10%;
+  --ring: 180 100% 50%;
   --radius: 0.75rem;
+  
+  /* Cyber future theme */
+  --cyber-primary: 180 100% 50%;
+  --cyber-secondary: 270 100% 70%;
+  --cyber-accent: 300 100% 60%;
+  --cyber-glow: 180 100% 50%;
+  --cyber-grid: 180 30% 20%;
+  --cyber-dark: 220 27% 3%;
+  --cyber-surface: 220 20% 8%;
 }
 
 * {
@@ -260,39 +269,91 @@ body.page-inactive {
   );
 }
 
-/* Enhanced gradient text */
+/* Cyber future gradient text */
 .gradient-text {
   background: linear-gradient(
     135deg,
-    #5865f2 0%,
-    #7289da 25%,
-    #99aab5 50%,
-    #ffffff 75%,
-    #5865f2 100%
+    hsl(var(--cyber-primary)) 0%,
+    hsl(var(--cyber-secondary)) 25%,
+    hsl(var(--cyber-accent)) 50%,
+    hsl(var(--foreground)) 75%,
+    hsl(var(--cyber-primary)) 100%
   );
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: discordGradientShift 3s ease-in-out infinite;
+  animation: cyberGradientShift 4s ease-in-out infinite;
 }
 
-@keyframes discordGradientShift {
+@keyframes cyberGradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
-/* Enhanced Discord bot theme colors */
-.discord-primary {
-  background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+/* Cyber grid background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(hsl(var(--cyber-grid) / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--cyber-grid) / 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: grid-move 20s linear infinite;
 }
 
-.discord-secondary {
-  background: linear-gradient(135deg, #4f545c 0%, #36393f 100%);
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 30px; }
 }
 
-.discord-accent {
-  background: linear-gradient(135deg, #99aab5 0%, #2c2f33 100%);
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Cyber theme utilities */
+.text-cyber-primary {
+  color: hsl(var(--cyber-primary));
+}
+
+.text-cyber-secondary {
+  color: hsl(var(--cyber-secondary));
+}
+
+.bg-cyber-primary {
+  background-color: hsl(var(--cyber-primary));
+}
+
+.bg-cyber-secondary {
+  background-color: hsl(var(--cyber-secondary));
 }
 
 /* Enhanced animations */
