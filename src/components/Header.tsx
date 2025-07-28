@@ -1,10 +1,32 @@
 
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Menu, X, Bot, ExternalLink } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // If already on home page, just scroll to section
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // If on different page, navigate to home first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50 animate-slide-down">
@@ -25,15 +47,21 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link to="/#features" className="nav-link">
+            <button 
+              onClick={() => handleNavigation('#features')} 
+              className="nav-link cursor-pointer"
+            >
               Features
-            </Link>
+            </button>
             <Link to="/commands" className="nav-link">
               Commands
             </Link>
-            <Link to="/#stats" className="nav-link">
+            <button 
+              onClick={() => handleNavigation('#stats')} 
+              className="nav-link cursor-pointer"
+            >
               Statistics
-            </Link>
+            </button>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -59,13 +87,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border/50 animate-slide-in-down">
             <nav className="flex flex-col space-y-3">
-              <Link 
-                to="/#features" 
-                className="mobile-nav-link"
-                onClick={() => setIsMenuOpen(false)}
+              <button 
+                onClick={() => handleNavigation('#features')} 
+                className="mobile-nav-link text-left cursor-pointer"
               >
                 Features
-              </Link>
+              </button>
               <Link 
                 to="/commands" 
                 className="mobile-nav-link"
@@ -73,13 +100,12 @@ const Header = () => {
               >
                 Commands
               </Link>
-              <Link 
-                to="/#stats" 
-                className="mobile-nav-link"
-                onClick={() => setIsMenuOpen(false)}
+              <button 
+                onClick={() => handleNavigation('#stats')} 
+                className="mobile-nav-link text-left cursor-pointer"
               >
                 Statistics
-              </Link>
+              </button>
               <div className="pt-2 border-t border-border/50">
                 <a 
                   href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
