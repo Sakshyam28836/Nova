@@ -25,15 +25,15 @@ const Header = () => {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a href="#features" className="nav-link">
+            <Link to="/#features" className="nav-link">
               Features
-            </a>
+            </Link>
             <Link to="/commands" className="nav-link">
               Commands
             </Link>
-            <a href="#stats" className="nav-link">
+            <Link to="/#stats" className="nav-link">
               Statistics
-            </a>
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -59,13 +59,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border/50 animate-slide-in-down">
             <nav className="flex flex-col space-y-3">
-              <a 
-                href="#features" 
+              <Link 
+                to="/#features" 
                 className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
-              </a>
+              </Link>
               <Link 
                 to="/commands" 
                 className="mobile-nav-link"
@@ -73,13 +73,13 @@ const Header = () => {
               >
                 Commands
               </Link>
-              <a 
-                href="#stats" 
+              <Link 
+                to="/#stats" 
                 className="mobile-nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Statistics
-              </a>
+              </Link>
               <div className="pt-2 border-t border-border/50">
                 <a 
                   href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands"
