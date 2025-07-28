@@ -57,7 +57,7 @@ const Footer = () => {
               <li><a href="https://discord.com/oauth2/authorize?client_id=1295630240852344842&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                 Invite Bot <ExternalLink className="h-3 w-3" />
               </a></li>
-              <li><Link to="/dashboard" className="hover:text-primary transition-colors">Dashboard</Link></li>
+              
             </ul>
           </div>
         </div>
