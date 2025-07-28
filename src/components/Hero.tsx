@@ -76,13 +76,13 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight animate-text-reveal">
-            <span className="inline-block animate-slide-up-delayed bg-gradient-to-r from-discord-blurple to-discord-purple bg-clip-text text-transparent animate-text-shimmer">Nova</span>{" "}
-            <span className="inline-block animate-slide-up-delayed bg-gradient-to-r from-discord-purple to-discord-green bg-clip-text text-transparent animate-text-shimmer-delayed">Discord</span>{" "}
-            <span className="inline-block animate-slide-up-more-delayed bg-gradient-to-r from-discord-green to-discord-blurple bg-clip-text text-transparent animate-text-shimmer-more-delayed">Bot</span>
+            <span className="inline-block animate-slide-up-delayed gradient-text animate-text-shimmer">Nova</span>{" "}
+            <span className="inline-block animate-slide-up-delayed gradient-text animate-text-shimmer-delayed">Discord</span>{" "}
+            <span className="inline-block animate-slide-up-more-delayed gradient-text animate-text-shimmer-more-delayed">Bot</span>
           </h1>
           
           <div className="relative mb-8 md:mb-12">
-            <p className="text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-discord-text-muted via-discord-purple/80 to-discord-text-muted bg-clip-text text-transparent max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed animate-typing-reveal font-medium">
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed animate-typing-reveal">
               The ultimate Discord bot with powerful features to manage and grow your server community.
             </p>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse-slow"></div>
